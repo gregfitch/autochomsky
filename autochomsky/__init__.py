@@ -32,7 +32,7 @@ from random import sample
 import sys
 import textwrap
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 
 def chomsky(times=1, line_length=72):
@@ -169,6 +169,7 @@ def chomsky(times=1, line_length=72):
 
     # Return the paragraph
     return textwrap.fill(' '.join(parts), line_length)
+
 
 if __name__ == '__main__':
     # execute if run as a script
