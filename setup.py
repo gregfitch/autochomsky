@@ -12,7 +12,7 @@ reqs = [str(ir.req) for ir in install_reqs]
 
 setup(
     name='autochomsky',
-    version='1.0.3',
+    version='1.0.4',
     packages=find_packages(),
     scripts=[],
     # zip_safe=True,
