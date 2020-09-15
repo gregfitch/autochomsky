@@ -8,11 +8,14 @@ except ImportError:
 
 install_reqs = parse_requirements('requirements.txt', session=False)
 
-reqs = [str(ir.req) for ir in install_reqs]
+try:
+    reqs = [str(ir.req) for ir in install_reqs]
+except AttributeError:
+    reqs = [str(ir.requirement) for ir in install_reqs]
 
 setup(
     name='autochomsky',
-    version='1.0.5',
+    version='1.0.6',
     packages=find_packages(),
     scripts=[],
     # zip_safe=True,
