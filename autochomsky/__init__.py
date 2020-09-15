@@ -9,13 +9,16 @@ stylistic patterns that Chomsky is noted for.
 To generate sentences of linguistic wisdom in a paragraph
 
 For 1 sentence wrapped at 72 characters:
->>> chomsky()
+
+> chomsky()
 
 For n sentences wrapped at 72 characters:
->>> chomsky(n)
+
+> chomsky(n)
 
 For n sentence wrapped at x characters:
->>> chomsky(n, x)
+
+> chomsky(n, x)
 
 The phrase database was converted directly from someone else's Lisp program:
 http://www-personal.umich.edu/~jlawler/foggy.lsp
@@ -23,7 +26,7 @@ http://www-personal.umich.edu/~jlawler/foggy.lsp
 Created by Raymond Hettinger, 2005
 http://code.activestate.com/recipes/440546-chomsky-random-text-generator/
 
-Modified by Greg Fitch, OpenStax, 2016
+Modified by Greg Fitch, OpenStax, 2020
 https://github.com/gregfitch
 """
 
@@ -32,7 +35,7 @@ from random import sample
 import sys
 import textwrap
 
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 
 
 def chomsky(times=1, line_length=72):
@@ -175,10 +178,10 @@ if __name__ == '__main__':
     # execute if run as a script
     try:
         sentences = int(sys.argv[1])
-    except Exception:
+    except IndexError:
         sentences = 1
     try:
         length = int(sys.argv[2])
-    except Exception:
+    except IndexError:
         length = 72
     print(chomsky(sentences, length))
