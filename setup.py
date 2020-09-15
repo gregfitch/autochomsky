@@ -15,7 +15,7 @@ except AttributeError:
 
 setup(
     name='autochomsky',
-    version='1.0.5',
+    version='1.0.6',
     packages=find_packages(),
     scripts=[],
     # zip_safe=True,
